@@ -13,6 +13,8 @@
 
       </div>
       <div>
+        <h2> Most liked Categories</h2>
+
         {% if categories %}
         <ul>
           {% for category in categories %}
@@ -25,6 +27,22 @@
           <strong> There are no categories present.</strong>
         {% endif %}
       </div>
+      <div>
+        <h2> Most Viewed Pages</h2>
+        {% if pages %}
+        <ul>
+          {% for page in pages %}
+          <li>
+            <a href="/rango/page/{{ page.slug }}">{{ page.name }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+        {% else %}
+        <bold> There are no pages present. </bold>
+       {% endif %}
+     </div>
+
+
       <div>
         <a href="/rango/about/">About</a><br />
         <img src="{% static "images/SxeY7La.png" %}"

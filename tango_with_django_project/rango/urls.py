@@ -11,6 +11,6 @@ urlpatterns = [
 #or 0-9 denoted by \w and any hyphens (-)
 #denoted by \-, and we can match as many of
 #these as we like denoted by the [ ]+ expression
-
+   url(r'^page/(?P<page_name_slug>[\w\-]+)/$' ,views.show_page, name='show_page')
 
 ]
