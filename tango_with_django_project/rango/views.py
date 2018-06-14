@@ -31,3 +31,15 @@ def show_category(request, category_name_slug):
         context_dict['pages'] = None
 
     return render(request, 'rango/category.html', context_dict)
+def show_page(request, page_name_slug):
+    context_dict = {}
+    try:
+        page = Page.objects.get(slug=page_name_slug)
+        categories = Category.objects.filter(page=page)
+        context_dict['pages'] = pages
+        context_dict['category'] = category
+
+    except Category.DoesNotExist:
+        context_dict['category'] = None
+        context_dict['pages'] = None
+    return render(request, 'rango/page.html', context_dict)
