@@ -27,7 +27,7 @@ SECRET_KEY = '8orj-%(egs3qx9os831=q!&1@33pavhpf4$-e82*3_g)s@%$)$'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+ 
 
 # Application definition
 
