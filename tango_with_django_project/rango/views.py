@@ -11,7 +11,7 @@ def index(request):
 
     return render(request, 'rango/index.html', context_dict)
 def about(request):
-    context_dict2 = {'my_name': 'Huy'}
+    context_dict2 = {'my_name ': 'Huy'}
     return render(request, 'rango/about.html', context=context_dict2)
 def show_category(request, category_name_slug):
     #create a context dict which we can pass to the template rendering
