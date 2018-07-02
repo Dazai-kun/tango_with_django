@@ -27,7 +27,7 @@ SECRET_KEY = '8orj-%(egs3qx9os831=q!&1@33pavhpf4$-e82*3_g)s@%$)$'
 DEBUG = True
 
 ALLOWED_HOSTS = []
- 
+LOGIN_URL = '/rango/login/'
 
 # Application definition
 
@@ -39,8 +39,13 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rango',
+    'registration',
 )
-
+REGISTRATION_OPEN = True
+ACCOUNT_ACTIVATION_DAYS = 7
+REGISTRATION_AUTO_LOGIN = True
+LOGIN_REDIRECT_URL = '/rango/'
+LOGIN_URL = '/accounts/login/'
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
