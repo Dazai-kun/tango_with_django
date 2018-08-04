@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'rango',
     'registration',
+    'bootstrap_toolkit',
 )
 REGISTRATION_OPEN = True
 ACCOUNT_ACTIVATION_DAYS = 7
